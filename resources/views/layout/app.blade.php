@@ -39,7 +39,7 @@
  
     <strong> 
         <a href="{{ config('app.company_url', '#') }}"> 
-            {{ config('app.company_name', 'My company') }} 
+            {{ config('app.company_name', 'POLITEKNIK NEGERI MALANG') }} 
         </a> 
     </strong> 
 @stop 
@@ -47,19 +47,17 @@
 {{-- Add common Javascript/Jquery code --}} 
  
 @push('js') 
-<script> 
+<script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script> 
  
-    $(document).ready(function() { 
-        // Add your common script logic here... 
-    }); 
- 
-</script> 
 @endpush 
+ 
+@stack('scripts')
  
 {{-- Add common CSS customizations --}} 
  
 @push('css') 
-<style type="text/css"> 
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css"> 
+<style type="text/css">
  
     {{-- You can add AdminLTE customizations here --}} 
     /* 

@@ -30,3 +30,4 @@ Route::get('/user/ubah/{id}', [UserController::class, 'ubah'])->name('/user/ubah
 Route::get('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan'])->name('/user/ubah_simpan');
 Route::put('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan'])->name('/user/ubah_simpan');
 Route::get('/user/hapus/{id}', [UserController::class, 'hapus'])->name('/user/hapus');
+Route::get('/kategori', [KategoriController::class, 'index']);
