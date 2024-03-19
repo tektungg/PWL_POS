@@ -6,7 +6,9 @@
     {{ config('adminlte.title') }} 
     @hasSection('subtitle') | @yield('subtitle') @endif 
 @stop 
- 
+
+@vite('resources/js/app.js') 
+
 {{-- Extend and customize the page content header --}} 
  
 @section('content_header') 
@@ -29,6 +31,7 @@
 @section('content') 
     @yield('content_body') 
 @stop 
+
  
 {{-- Create a common footer --}} 
  
