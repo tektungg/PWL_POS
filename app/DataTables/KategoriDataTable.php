@@ -79,7 +79,7 @@ class KategoriDataTable extends DataTable
             Column::make('kategori_nama'),
             Column::make('created_at'),
             Column::make('updated_at'),
-            Column::computed('action')
+            Column::computed('action') //tambahkan kolom ini
                 ->exportable(false)
                 ->printable(false)
                 ->width(60)
