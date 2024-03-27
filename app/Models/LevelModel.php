@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class LevelModel extends Model
 {
     use HasFactory;
-    protected $table = 'm_level';
-    protected $primary_key = 'level_id';
+    protected $table = "m_level";
+    protected $primaryKey = "level_id";
 
     public function users(): HasMany
     {
