@@ -19,7 +19,7 @@ use App\Http\Controllers\Api\TransaksiController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-//JS10
+//JS 10
 Route::post('/register', App\Http\Controllers\Api\RegisterController::class)->name('register');
 Route::post('/login', App\Http\Controllers\Api\LoginController::class)->name('login');
 Route::post('/logout', App\Http\Controllers\Api\LogoutController::class)->name('logout');
@@ -54,3 +54,15 @@ Route::post('barang', [BarangController::class, 'store']);
 Route::get('barang/{barang}', [BarangController::class, 'show']);
 Route::put('barang/{barang}', [BarangController::class, 'update']);
 Route::delete('barang/{barang}', [BarangController::class, 'destroy']);
+
+//JS 11
+Route::post('/register1', App\Http\Controllers\Api\RegisterController::class)->name('register1');
+Route::get('/register1/{id}', [App\Http\Controllers\Api\RegisterController::class, 'show'])->name('register1');
+
+// Barang
+Route::post('/barang', App\Http\Controllers\Api\BarangController::class)->name('barang');
+Route::get('/barang/{id}', [App\Http\Controllers\Api\BarangController::class, 'show'])->name('barang');
+
+// Transaksi
+Route::post('/transaksi', App\Http\Controllers\Api\TransaksiController::class)->name('transaksi');
+Route::get('/transaksi/{id}', [App\Http\Controllers\Api\TransaksiController::class, 'show'])->name('transaksi');
